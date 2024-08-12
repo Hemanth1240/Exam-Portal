@@ -1,0 +1,210 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color: rgb(230, 236, 240);
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.PageHeader {
+    background-color: white;
+    padding: 20px 0;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Adds a subtle shadow to the header */
+}
+
+.brand-name {
+    color: rgb(249, 6, 31);
+    font-weight: bolder;
+    font-size: 1.5rem;
+}
+
+#b1 {
+    color: rgb(76, 107, 111);
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+
+#b1:hover {
+    background-color: rgb(94, 132, 136);
+    color: white;
+}
+
+/* Centered container for exam list */
+.exam-container {
+    width: 80%; /* Adjusted width for responsiveness */
+    max-width: 900px;
+    background: whitesmoke;
+    color: rgb(0, 0, 0);
+    margin: 50px auto;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Table styling for exam list */
+.exam-container table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+.exam-container th,
+.exam-container td {
+    text-align: center;
+    border: 2.5px solid black;
+    padding: 10px;
+    color: rgba(45, 18, 18, 0.908);
+}
+
+.exam-container th {
+    background-color: #f1f1f1;
+    font-weight: bold;
+}
+
+.exam-container a {
+    text-decoration: none;
+    color: black;
+}
+
+.exam-container a:hover {
+    color: red;
+}
+.container1 {
+    width: 60%;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin: 0 auto;
+}
+
+h1 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.question-box {
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+.question-box p {
+    font-size: 18px;
+    color: #444;
+}
+
+.question-box form {
+    margin-top: 20px;
+}
+
+.question-box input[type="radio"] {
+    margin-right: 10px;
+    margin-bottom: 10px;
+}
+
+.question-box button {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    margin: 10px 5px 0 0;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+.question-box button:hover {
+    background-color: #45a049;
+}
+
+.question-box button[name="finish"] {
+    background-color: #f44336;
+}
+
+.question-box button[name="finish"]:hover {
+    background-color: #d32f2f;
+}
+/* Login, Registration, and Forgot Password Boxes */
+.loginbox, .Forgot, .registerbox {
+    width: 350px;
+    background: whitesmoke;
+    color: rgb(249, 6, 31);
+    top: 45%;
+    left: 50%;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    box-sizing: border-box;
+    padding: 70px 30px;
+    border: 1px solid black; /* Added border */
+    border-radius: 10%; /* Rounded corners */
+}
+
+/* Adjust the height of boxes accordingly */
+.registerbox {
+    height: 520px;
+}
+
+.Forgot {
+    height: 450px;
+}
+
+.loginbox {
+    height: 410px;
+}
+
+h1 {
+    margin: 0;
+    padding: 0 0 20px;
+    text-align: center;
+    font-size: 22px;
+}
+
+.loginbox p, .registerbox p, .Forgot p {
+    margin: 0;
+    padding: 0;
+    font-weight: bold;
+}
+
+.loginbox input, .registerbox input, .Forgot input {
+    width: 100%;
+    margin-bottom: 20px;
+    border: none;
+    border-bottom: 1px solid rgb(0, 0, 0);
+    background: transparent;
+    outline: none;
+    height: 40px;
+    color: rgb(0, 0, 0);
+    font-size: 18px;
+}
+
+.loginbox input[type="submit"], .registerbox input[type="submit"], .Forgot input[type="submit"] {
+    border: none;
+    outline: none;
+    height: 40px;
+    background: red;
+    color: white;
+    font-size: 18px;
+    border-radius: 20px;
+}
+
+.loginbox input[type="submit"]:hover, .registerbox input[type="submit"]:hover, .Forgot input[type="submit"]:hover {
+    cursor: pointer;
+    background: #ff0707;
+    color: #000;
+}
+
+.loginbox a, .registerbox a, .Forgot a {
+    text-decoration: none;
+    font-size: 12px;
+    line-height: 20px;
+    color: rgb(255, 0, 0);
+}
+
+.loginbox a:hover, .registerbox a:hover, .Forgot a:hover {
+    color: #f50d0d;
+}
