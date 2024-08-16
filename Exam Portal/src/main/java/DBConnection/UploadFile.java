@@ -2,14 +2,13 @@ package DBConnection;
 
 import java.io.*;
 import java.sql.*;
-import javax.servlet.ServletException;
-import javax.servlet.annotation.MultipartConfig;
-import javax.servlet.annotation.WebServlet;
-import javax.servlet.http.HttpServlet;
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
-import javax.servlet.http.Part;
-
+import jakarta.servlet.ServletException;
+import jakarta.servlet.annotation.MultipartConfig;
+import jakarta.servlet.annotation.WebServlet;
+import jakarta.servlet.http.HttpServlet;
+import jakarta.servlet.http.HttpServletRequest;
+import jakarta.servlet.http.HttpServletResponse;
+import jakarta.servlet.http.Part;
 /**
  * Servlet implementation class UploadFile
  */
@@ -102,7 +101,18 @@ public class UploadFile extends HttpServlet {
     }
 
     private boolean uploadFile(InputStream is, String path) {
-        try (FileOutputStream fos = new FileOutputStream(path)) {
+        File file = new File(path);
+        File directory = file.getParentFile();
+        
+        // Create directories if they do not exist
+        if (!directory.exists()) {
+            if (!directory.mkdirs()) {
+                System.err.println("Failed to create directory: " + directory.getAbsolutePath());
+                return false;
+            }
+        }
+        
+        try (FileOutputStream fos = new FileOutputStream(file)) {
             byte[] buffer = new byte[4096];
             int bytesRead;
             while ((bytesRead = is.read(buffer)) != -1) {
@@ -114,6 +124,7 @@ public class UploadFile extends HttpServlet {
             return false;
         }
     }
+
 
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         processRequest(request, response);
